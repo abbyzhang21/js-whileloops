@@ -17,7 +17,11 @@ while (i<10){
 
 
 /*1. Use a while loop and print out a list of numbers from 1 to 10*/
-
+var i = 1;
+while (i < 11){
+	console.log(i);
+	i++;
+}
 
 
 /*2. Use a while loop to create the following message:
@@ -29,7 +33,11 @@ while (i<10){
 ...
 "Now serving 11"*/
 
-
+var i = 1;
+while (i < 12){
+	console.log("Now serving " + i + ".");
+	i++;
+}
 
 /*3. Use a while loop to loop through the tvShows array and print out the following:
 
@@ -40,7 +48,11 @@ while (i<10){
 "I like to binge watch Keeping up with the Kardasians."*/
 
 var tvShows = ["Breaking Bad", "Game of Thrones", "The Bachelor", "The Walking Dead", "Keeping Up with the Kardasians"];
-
+var i = 0;
+while (i < tvShows.length){
+	console.log("I like to binge watch " + tvShows[i]);
+	i++;
+}
 
 
 /*4. Generate a multiplication table for the number 3 and print out the following:
@@ -54,7 +66,11 @@ var tvShows = ["Breaking Bad", "Game of Thrones", "The Bachelor", "The Walking D
 9 x 3 = 27
 
 */
-
+var i = 1;
+while (i < 10){
+	console.log(i + " x " + "3 " + "= " + i*3);
+	i++;
+}
 
 
 
@@ -85,7 +101,19 @@ devleague homie!
 ...
 ...
 ...*/
-
+var count = 1;
+while(count < 100){
+	if(count % 3 === 0){
+		console.log("dev");	
+	}if(count % 5 === 0){
+		console.log("league");
+	}if(count % 3 === 0 && count % 5 === 0){
+		console.log("devleague homie");
+	}if(count % 3 !== 0 || count % 5 !== 0){
+		console.log(count);
+	}
+	count++;
+}
 
 /*
  * #6
@@ -97,7 +125,15 @@ devleague homie!
  will purchase a donut as long as you have the sufficient funds.
  *Pass in a number value to invoke your function. Console.log donutBought.
 */ 
-
-
-
+var donutPrice = 5;
+var donutBought = 0;
+function buyDonut(budget){
+	while(budget >= donutPrice){
+		donutBought += 1;
+		budget -= donutPrice;
+	}
+	return donutBought;
+}
+buyDonut(100);
+console.log("Donut Bought: " + donutBought);
 
